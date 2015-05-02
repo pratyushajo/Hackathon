@@ -1,0 +1,9 @@
+.ui-page, .ui-body-c, .ui-page-active, .ui-overlay-c, .ui-mobile-viewport
+{
+    background: transparent !important;
+}
+h1{
+	color:blue;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 50%;
+}

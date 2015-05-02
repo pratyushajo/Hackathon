@@ -1,0 +1,18 @@
+.ui-page, .ui-body-c, .ui-page-active, .ui-overlay-c, .ui-mobile-viewport
+{
+    background: transparent !important;
+}
+
+body, .ui-overlay-c
+{
+    background: url('../images/hope1.jpg') !important; 
+   
+    background-position:center center !important;
+    background-attachment:scroll !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:repeat-x !important;
+}
+
