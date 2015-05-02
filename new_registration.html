@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/themes/YellowGreen.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
+	<meta charset="UTF-8">
+	<title>Job Post</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src = "js/jobpost.js" > </script>
+</head>
+<body>
+<div data-role="page">
+<div data-role="header" data-theme = "c"> <h4> Registration Details </h4></div>
+
+	<div role="main" class="ui-content" data-theme = "c">
+
+
+	<center><label> Welcome!. Please fill in the information. All the fields are mandatory  </label> </br> </center>
+
+	<form id = "jobPosting" action="insert_jobpost.php" method="POST">
+
+		<label for="OrgID">Oragnization:</label>
+		<input type="text" name="OrgID" id="OrgID" value="">
+
+		<label for="newUserEmailID">Email:</label>
+		<input type="email" name="newUserEmailID" id="newUserEmailID">
+
+		<label for="newUseraddressID">Address:</label>
+		<input type="text" name="newUseraddressID" id="newUseraddressID" value="">
+
+		<label for="newUserzipcodeID">ZipCode:</label>
+		<input type="number" name="newUserzipcodeID" id="newUserzipcodeID" value="">
+
+		<label for="newUsertelID">Tel:</label>
+		<input type="tel" name="newUsertelID" id="newUsertelID" value="">
+
+	<input type="button" id = "new_User_submit_id" data-enhanced="true" data-inline="true" value="Submit">
+    <input type="button" id = "new_User_cancel_id" data-inline="true" data-enhanced="true" value="Cancel">
+
+</form>
+
+	</div>
+	<div data-role="footer" data-theme = "c"> <h4> Page Footer </h4> </div>
+
+
+</div>
+
+
+</body>
