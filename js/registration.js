@@ -39,7 +39,7 @@ var Regis = {
 		window.location.href = "./employee_job_list.html";
 	},
 	
-	cancel: function(){
-		window.location.href = "./employee_welcome.html";
+	clear: function(){
+		$("#jobPosting")[0].reset();
 	}
 }

@@ -10,7 +10,7 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src = "js/jobpost.js" > </script>
+	<script src = "js/registration.js" > </script>
 </head>
 <body>
 	<div data-role="page" data-theme="c">
@@ -26,7 +26,7 @@
 
 			<form id = "jobPosting" action="insert_jobpost.php" method="POST">
 
-				<label for="OrgID">Oragnization:</label>
+				<label for="OrgID">Organization:</label>
 				<input type="text" name="OrgID" id="OrgID" value="">
 
 				<label for="newUserEmailID">Email:</label>
@@ -43,8 +43,8 @@
 
 				
 				<center>
-					<input type="button" id = "new_User_submit_id"  data-inline="true" value="Register">
-					<input type="button" id = "new_User_cancel_id"  data-inline="true" value="Reset">
+					<input type="button" id = "new_User_submit_id"  data-inline="true" value="Register" onclick="Regis.submit()">
+					<input type="button" id = "new_User_cancel_id"  data-inline="true" value="Reset" onclick="Regis.clear()">
 				</center>
 
 			</form>
