@@ -18,7 +18,7 @@ var Job = {
 			email = $('#emailID').val(),
 			job = $('input[name="radio-choice"]:checked').val();
 		
-		if(this.job === "job") {
+		if(job === "job") {
 			//alert("in ajax call 1");
 			$.ajax({
 				type:"POST",
@@ -56,6 +56,11 @@ var Job = {
 				async: false,
 			});
 		}
+		alert("Your posting has been created successfully!");
+		window.location.href = "./employee_job_list.html";
+	},
+	
+	cancel: function(){
 		window.location.href = "./employee_job_list.html";
 	}
 }
