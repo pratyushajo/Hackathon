@@ -5,8 +5,9 @@
 
 body, .ui-overlay-c
 {
+	z-index: -1;
     background: url('../images/hope1.jpg') !important; 
-   
+   	
     background-position:center center !important;
     background-attachment:scroll !important;
     -webkit-background-size: cover;
@@ -14,5 +15,6 @@ body, .ui-overlay-c
     -o-background-size: cover;
     background-size: cover;
     background-repeat:repeat-x !important;
+		
+		
 }
-

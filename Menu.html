@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
-
+	<link rel = "stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" href="css/themes/YellowGreen.min.css" />
 	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
@@ -28,25 +28,30 @@
 	<div data-role="page" data-theme ="c">
 
 
-		<div data-role="header" data-theme = "c"> <h4> Hope </h4> </div>
-		<div role="main" class="ui-content ui-overlay-c">
-
-  
-
-			<center>
-				<input type="button"  data-inline="true" value="Find Jobs" onclick="gotoJobUserPage()">
-			
-				<input type="button"  data-inline="true" value="Find Training" onclick="gotoTrainingUserPage()">
+		<div data-role="header" data-theme = "c"></div>
+		<!--<div role="main" class="ui-content ui-overlay-c">-->
+			<div id="image-div">
 				
-			</center>
-			<br>
-			<center>
-				Post
-				<a href="employee_welcome.html" rel="external">jobs</a>
-				or
-				<a href="employee_welcome.html" rel="external">trainings !</a>
-			</center>
 			</div>
+			
+			<div id="menu-btn">
+				<center>
+					<input type="button"  data-inline="true" value="Find Jobs" data-icon="bullets" onclick="gotoJobUserPage()">
+		
+					<input type="button"  data-inline="true" data-icon="gear" value="Get Trained" onclick="gotoTrainingUserPage()">
+			
+				</center>
+				<br>
+				<center>
+					Post
+					<a href="employee_welcome.html" rel="external">jobs</a>
+					or
+					<a href="employee_welcome.html" rel="external">trainings !</a>
+				</center>
+			</div>
+			
+			
+			<!--</div>-->
 			<div data-role="footer" data-theme = "c" data-position="fixed"></div>
 		</div>
 	</body>
