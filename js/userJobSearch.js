@@ -30,8 +30,40 @@ var Search = {
 			alert(this.zipcode);
 			if(resourcezip==this.zipcode)
 			{
+				debugger;
 				html += [
-					'<li>',
+					'<li data-role="list-divider" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child" role="heading">',
+					'Title : '+resource.title,
+					'<span class="ui-li-count ui-body-inherit">'+ 'Ref No : '+resource.job_id+'</span>',
+					'</li>',
+    			'<li>',
+					'<h2>'+'Employer : '+resource.employer+'</h2>',
+					'<p>',
+					'<strong>'+resource.description+'</strong>',
+					'</p>',
+					'<p>',
+					'<strong>'+'Starts on : '+resource.start_date+'		Ends on : '+resource.end_date+'</strong>',
+					'</p>',
+    			'<a>'+resource.email_id+'</a>',
+        	'<p class="ui-li-aside">',
+					'<strong>'+'Wages : '+resource.wages+'</strong>',
+					'</li>'].join('');
+					
+					
+					
+					/*'<li>',
+					'<div class="ui-grid-a">',
+					'<div class="ui-block-a">',
+					resource.address,
+					'</div>',
+					'<div class="ui-block-b">',
+					resource.description,
+					'</div>',
+					'</div>',
+					'</li>'].join('');*/
+					
+					
+					/*'<li>',
 					'<p>' , 
 					resource.address,
 					'</br>',
@@ -52,16 +84,17 @@ var Search = {
 					resource.title,
 					'</br>',
 					resource.wages,
-					'</li>'].join('');						
-				}
+					'</li>'].join('');		*/				
+		      }
 				$("#list_job").html(html);
 					
 			}	
 		
 		}				
-
+	
+	
+	
 	}
-}
 
 
 
