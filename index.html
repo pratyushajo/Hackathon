@@ -1,41 +1,38 @@
-<!DOCTYPE html> 
-<html>
-<head>
-<link rel="stylesheet" href="css/themes/YellowGreen.min.css" />
-<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
-<link rel = "stylesheet" type="text/css" href="css/welcome.css">
+	<!DOCTYPE html> 
+	<html>
+	<head>
+	<link rel = "stylesheet" type="text/css" href="css/welcome.css">
+		<meta charset="UTF-8">
+		<title>Hope</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
 	<meta charset="UTF-8">
-	<title>Hope</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+		<script>
+		function gotoMenu(){
+			location.href = "Menu.html";
 
-<meta charset="UTF-8">
-	<script>
-	function gotoMenu(){
-		location.href = "Menu.html";
+			setTimeout(function(){
+				location.href = "Menu.html"},1000);
 
-		setTimeout(function(){
-			location.href = "Menu.html"},1000);
+		}
 
-	}
+		</script>
+		<title>Hope</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+		
+		
+	<body>
+	<div data-role="page" onclick = "gotoMenu()">
 
-	</script>
-	<title>Hope</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	
-	
-<body>
-<div data-role="page" onclick = "gotoMenu()">
+		
+	<div data-role="content"></div>
+		
+	</div>
 
-	
-<div data-role="content"></div>
-	
-</div>
+	</body>
 
-</body>
-
-</html>
+	</html>

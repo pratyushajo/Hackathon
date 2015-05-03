@@ -2,14 +2,14 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="css/themes/YellowGreen.min.css" />
-<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
+	<link rel="stylesheet" href="css/themes/YellowGreen.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<meta charset="UTF-8">
 	<title>Job Post</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 	function gotoJobUserPage(){
 		location.href = "userJobSearch.html"
@@ -25,36 +25,26 @@
 	</script>
 </head>
 <body>
-<div data-role="page" data-theme ="c">
+	<div data-role="page" data-theme ="c">
 
 
-
-<div role="main" class="ui-content" data-theme ="c">
+		<div data-role="header" data-theme = "c"> <h4> Hope </h4> </div>
+		<div role="main" class="ui-content ui-overlay-c">
 
   
 
- <center><button class="ui-btn ui-shadow"  data-inline="true" onclick = "gotoJobUserPage()">Find Jobs </button>
-  <button class="ui-btn ui-shadow" data-inline="true" onclick = "gotoTrainingUserPage()">Find Training 
-  </button> </center>
+			<center>
+				<input type="button"  data-inline="true" value="Find Jobs" onclick="gotoJobUserPage()">
+			
+				<input type="button"  data-inline="true" value="Find Training" onclick="gotoTrainingUserPage()">
+				
+			</center>
 
-   <li onclick = "gotoJoborTrainingPage()">Employers</li>
-   <li onclick = "gotoJoborTrainingPage()">Trainers</li>
- 
- 
- 
-  </div>
-
- 
-
-  
-  
-  </div>
-
-		
-	
-
-</div>
-</div>
-</body>
-</html>
+				 <li onclick = "gotoJoborTrainingPage()">Employers</li>
+				 <li onclick = "gotoJoborTrainingPage()">Trainers</li>
+			</div>
+			<div data-role="footer" data-theme = "c" data-position="fixed"></div>
+		</div>
+	</body>
+	</html>
 

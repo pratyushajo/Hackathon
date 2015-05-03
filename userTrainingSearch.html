@@ -1,38 +1,41 @@
 <!DOCTYPE html> 
 <html>
 <head>
-<link rel="stylesheet" href="css/themes/YellowGreen.min.css" />
-<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
+	<link rel="stylesheet" href="css/themes/YellowGreen.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<meta charset="UTF-8">
 	<title>Trainings Offered</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src = "js/jobpost.js" > </script>
 </head>
 <body>
-<div data-role="page">
-<div data-role="content" data-theme = "c">
-<div data-role="header" data-theme = "c"> <h4> Training </h4> </div>
+	<div data-role="page" data-theme="c">
+		
+		<div data-role="header" data-theme = "c">
+			<h4> Training </h4>
+			<a href="menu.html" rel="external" data-icon="delete" class="ui-btn-right">Exit</a>
+		</div>
+		<div data-role="main" class="ui-content ui-overlay-c">
+			<center><label> Welcome!. Please enter the zipcode to locate all the jobs offered near your location. </label> </br> 
+			</center>
 
-<center><label> Welcome!. Please enter the zipcode to locate all the jobs offered near your location. </label> </br> 
-</center>
-
-<input type="search" name="searchTraining" id="searchTraining" value="" 
-placeholder="Please enter a zipcode...">
-<ol data-role="listview" data-theme = "c">
-    <li>Acura</li>
-    <li>Audi</li>
-    <li>BMW</li>
-    <li>Cadillac</li>
-    <li>Ferrari</li>
-</ol>
-</div>
-<div data-role="footer" data-theme = "c"> <h4>Page Footer</h4></div>
+			<input type="search" name="searchTraining" id="searchTraining" value="" 
+			placeholder="Please enter a zipcode...">
+			<ol data-role="listview" data-theme = "c">
+				    <li>Acura</li>
+				    <li>Audi</li>
+				    <li>BMW</li>
+				    <li>Cadillac</li>
+				    <li>Ferrari</li>
+			</ol>
+		</div>
+		<div data-role="footer" data-theme = "c" data-position="fixed"></div>
 	
-</div>
+	</div>
 
 </body>
 
