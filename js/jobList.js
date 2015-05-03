@@ -1,7 +1,7 @@
 var List = {
 	html: '',
 	addJob: function(){
-		window.location.href = "./Job Post.html";
+		window.location.href = "./jobPost.html";
 	},
 	getjoblist: function(user_id){
 		var self = this;
