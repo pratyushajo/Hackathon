@@ -30,7 +30,6 @@ var Search = {
 			alert(this.zipcode);
 			if(resourcezip==this.zipcode)
 			{
-				debugger;
 				html += [
 					'<li>',
 					'<p>' , 
@@ -54,16 +53,15 @@ var Search = {
 					'</br>',
 					resource.wages,
 					'</li>'].join('');						
-		      }
+				}
 				$("#list_job").html(html);
 					
 			}	
 		
 		}				
-	
-	
-	
+
 	}
+}
 
 
 

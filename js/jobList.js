@@ -60,6 +60,7 @@ var List = {
 					resource.title,
 					'</br>',
 					resource.cost,
+					'<button class=\'buttonc\' value="',resource.jod_id,'"onclick="List.delete()">Delete</button>',
 					'</li>'].join('');						
 		     
 				$("#list_job").html(this.html);
@@ -92,12 +93,18 @@ var List = {
 					resource.title,
 					'</br>',
 					resource.wages,
+					'<button class=\'buttonc\' id="',resource.job_id,'" onclick="List.delete(this.id)">Delete</button>',
 					'</li>'].join('');						
 		     
 				$("#list_job").html(this.html);
 					
 			}	
 		
+	},
+	delete: function(id){
+		alert('delete');
+		//alert($(this).id);
+		alert(id);
 	},
 	
 	init: function() {
