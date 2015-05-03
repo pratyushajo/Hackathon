@@ -4,7 +4,6 @@ var Search = {
 	go_buttonclick: function() {
 		var self = this;
 		this.zipcode = $('#searchJob').val();
-		
 		$.ajax({
 			type: "GET",
 			url: 'http://students.engr.scu.edu/~schandra/hope/gettrgpost_all.php',
@@ -12,24 +11,21 @@ var Search = {
 			async: false,
 			crossDomain : true,
 			success: function(data) {
-				
 				self.setResource(data);
 			}
 		});
 		
 	},
 	setResource: function(dataPassed) {
-		
-		
 		var html = '';
+		var i = 0;
 		for(var j=0; j< dataPassed.length; j++)
 		{
 			var resource = dataPassed[j];
 			resourcezip=resource.zipcode;
-			alert(resourcezip);
-			alert(this.zipcode);
 			if(resourcezip==this.zipcode)
 			{
+				i++;
 				html += [
     				'<h2 class="ui-collapsible-heading">',
 						'<a href="#" class="ui-collapsible-heading-toggle ui-btn  ui-btn-a">',
@@ -37,7 +33,7 @@ var Search = {
 						'</a>',
 						'</h2>',
 						'<ul data-role="listview" data-theme="a" data-divider-theme="b">',
-						'<li>'+'Id : '+ resource.job_id + '</li>',
+						'<li>'+'Id : '+ resource.training_id + '</li>',
             '<li data-role="list-divider">'+'From : '+resource.start_date +' to ' + resource.end_date +'</li>',
            	'<li>'+'Employer : '+ resource.employer + '</li>',
 						'<li>'+'Address : '+ resource.address + '</li>',
@@ -50,15 +46,13 @@ var Search = {
 						'</p>',
 						'</ul>'].join('');					
 		      }
-				$("#list_trainings").html(html);
-					
+				$("#list_trainings").html(html);		
 			}	
-		
-		}				
-	
-	
-	
-	}
+			if(i==0){
+				alert("No training posts found!");
+			}
+	}				
+}
 
 
 

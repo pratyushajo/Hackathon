@@ -1,6 +1,5 @@
 var Search = {
 	zipcode: 0,
-	
 	go_buttonclick: function() {
 		var self = this;
 		this.zipcode = $('#searchJob').val();
@@ -12,22 +11,21 @@ var Search = {
 			async: false,
 			crossDomain : true,
 			success: function(data) {
-				
 				self.setResource(data);
 			}
 		});
 		
 	},
 	setResource: function(dataPassed) {
-		
-		
 		var html = '';
+		var i = 0;
 		for(var j=0; j< dataPassed.length; j++)
 		{
 			var resource = dataPassed[j];
 			resourcezip=resource.zipcode;
 			if(resourcezip==this.zipcode)
 			{
+				i++;
 				html += [
   				'<h2 class="ui-collapsible-heading">',
 					'<a href="#" class="ui-collapsible-heading-toggle ui-btn  ui-btn-a">',
@@ -47,13 +45,14 @@ var Search = {
 					'<strong>'+ resource.description +'</strong>',
 					'</p>',
 					'</ul>'].join('');			
-		      }
-				$("#list_job").html(html);
-					
-			}	
+		      } 
+			$("#list_job").html(html);			
+		}	
+		if(i == 0){
+			alert("No jobs found!");
+		}
 		
-		}				
+		
+	}				
 	
-	
-	
-	}
+}

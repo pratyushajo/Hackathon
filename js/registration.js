@@ -1,8 +1,5 @@
 var Regis = {
 	uid: 0,
-	
-	
-	
 	submit: function() {
 		var org = $('#OrgID').val(),
 			email = $('#newUserEmailID').val(),
