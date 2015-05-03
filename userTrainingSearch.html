@@ -10,7 +10,7 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src = "js/jobpost.js" > </script>
+	<script src = "js/userTrainingSearch.js" > </script>
 </head>
 <body>
 	<div data-role="page" data-theme="c">
@@ -28,11 +28,11 @@
 			            <input type="search" name="searchJob" id="searchJob" value="" placeholder="Please enter a zipcode..." data-inline="true">
 			      </div>
 			      <div class="ui-block-d">
-			            <input type="button" id = "new_User_cancel_id"  data-inline="true" data-icon="check" value="Go">
+			            <input type="button" id = "new_User_cancel_id"  data-inline="true" data-icon="check" value="Go" onclick="Search.go_buttonclick()">
 			      </div>
 			</div>
 
-			<ol data-role="listview" data-theme = "c">
+			<ol id = "list_trainings" data-role="listview" data-theme = "c">
 				    <li>Acura</li>
 				    <li>Audi</li>
 				    <li>BMW</li>
