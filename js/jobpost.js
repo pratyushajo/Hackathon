@@ -16,7 +16,8 @@ var Job = {
 			wages = $('#wagesID').val(),
 			tel = $('#telID').val(),
 			email = $('#emailID').val(),
-			job = $('input[name="radio-choice"]:checked').val();
+			job = $('input[name="radio-choice"]:checked').val(),
+			uid = localStorage.getItem("uid");
 		
 		if(job === "job") {
 			//alert("in ajax call 1");
@@ -31,7 +32,8 @@ var Job = {
 						end_date:edate,
 						wages: wages,
 						email_id: email,
-						phone_number: tel
+						phone_number: tel,
+						user_id: uid
 					},
 				url: 'http://students.engr.scu.edu/~schandra/hope/insert_jobpost.php',
 				dataType: 'json',
@@ -49,7 +51,8 @@ var Job = {
 						end_date:edate,
 						cost: wages,
 						email_id: email,
-						phone_number: tel
+						phone_number: tel,
+						user_id: uid
 					},
 				url: 'http://students.engr.scu.edu/~schandra/hope/insert_trainingpost.php',
 				dataType: 'json',

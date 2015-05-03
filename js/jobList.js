@@ -1,6 +1,6 @@
 var List = {
-	window.onload = (function(){
-	    var id = localStorage.getItem('uid');
-			alert{uid};
-	})();
+	
+	addJob: function(){
+		window.location.href = "./Job Post.html";
+	}
 }
