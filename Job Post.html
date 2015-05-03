@@ -25,10 +25,10 @@
 	<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
     <legend>Type:</legend>
 
-        <input type="radio" name="radio-choice-job" id="radio-choice-job" value="job" checked="checked">
+        <input type="radio" name="radio-choice" id="radio-choice-job" value="job" checked="checked">
         <label for="radio-choice-job">Job</label>
 
-        <input type="radio" name="radio-choice-training" id="radio-choice-training" value="training">
+        <input type="radio" name="radio-choice" id="radio-choice-training" value="training" onclick="Job.changeLabel()">
         <label for="radio-choice-training">Training</label>
 	</fieldset>
 
@@ -58,13 +58,13 @@
 		<label for="edateID">End Date:</label>
 		<input type="date" name="edateID" id="edateID" value="">
 
-		<label for="wagesID">Wages:</label>
+		<label for="wagesID" id="wID">Wages:</label>
 		<input type="number" name="wagesID" pattern="[0-50]*" id="wagesID" value="">
 
 		<label for="telID">Tel:</label>
 		<input type="tel" name="telID" id="telID" value="">
 
-	<input type="button" id = "job_Detail_submit_id" data-enhanced="true" data-inline="true" value="Submit">
+	<input type="button" id = "job_Detail_submit_id" data-enhanced="true" data-inline="true" value="Submit" onclick="Job.submitJob()">
     <input type="button" id = "job_Detail_cancel_id" data-inline="true" data-enhanced="true" value="Cancel"
 
 	</form>
