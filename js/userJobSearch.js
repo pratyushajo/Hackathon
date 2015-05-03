@@ -30,61 +30,25 @@ var Search = {
 			alert(this.zipcode);
 			if(resourcezip==this.zipcode)
 			{
-				debugger;
 				html += [
-					'<li data-role="list-divider" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child" role="heading">',
-					'Title : '+resource.title,
-					'<span class="ui-li-count ui-body-inherit">'+ 'Ref No : '+resource.job_id+'</span>',
+  				'<h2 class="ui-collapsible-heading">',
+					'<a href="#" class="ui-collapsible-heading-toggle ui-btn  ui-btn-a">',
+					'Title : '+resource.title+'<span class="ui-collapsible-heading-status">'+ 'click to collapse contents' +'</span>',
+					'</a>',
+					'</h2>',
+					'<ul data-role="listview" data-theme="a" data-divider-theme="b">',
+					'<li>'+'Id : '+ resource.job_id + '</li>',
+          '<li data-role="list-divider">'+'From : '+resource.start_date +' to ' + resource.end_date +'</li>',
+         	'<li>'+'Employer : '+ resource.employer + '</li>',
+					'<li>'+'Address : '+ resource.address + '</li>',
+					'<li>',
+					'<a>'+'Email Id : '+ resource.email_id + '</a>',
 					'</li>',
-    			'<li>',
-					'<h2>'+'Employer : '+resource.employer+'</h2>',
-					'<p>',
-					'<strong>'+resource.description+'</strong>',
+					'<li>' + 'Contact : ' + resource.phone_number + '</li>',
+          '<p>',
+					'<strong>'+ resource.description +'</strong>',
 					'</p>',
-					'<p>',
-					'<strong>'+'Starts on : '+resource.start_date+'		Ends on : '+resource.end_date+'</strong>',
-					'</p>',
-    			'<a>'+resource.email_id+'</a>',
-        	'<p class="ui-li-aside">',
-					'<strong>'+'Wages : '+resource.wages+'</strong>',
-					'</li>'].join('');
-					
-					
-					
-					/*'<li>',
-					'<div class="ui-grid-a">',
-					'<div class="ui-block-a">',
-					resource.address,
-					'</div>',
-					'<div class="ui-block-b">',
-					resource.description,
-					'</div>',
-					'</div>',
-					'</li>'].join('');*/
-					
-					
-					/*'<li>',
-					'<p>' , 
-					resource.address,
-					'</br>',
-					resource.description,
-					'</br>',
-					resource.email_id,
-					'</br>',
-					resource.employer,
-					'</br>',
-					resource.end_date,
-					'</br>',
-					resource.job_id,
-					'</br>',
-					resource.phone_number,
-					'</br>',
-					resource.start_date,
-					'</br>',
-					resource.title,
-					'</br>',
-					resource.wages,
-					'</li>'].join('');		*/				
+					'</ul>'].join('');			
 		      }
 				$("#list_job").html(html);
 					
@@ -95,7 +59,3 @@ var Search = {
 	
 	
 	}
-
-
-
-
