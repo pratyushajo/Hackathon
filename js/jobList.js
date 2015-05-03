@@ -68,44 +68,43 @@ var List = {
 			}	
 	},
 	setResource_job: function(dataPassed) {
+		var html = '';
 		for(var j=0; j< dataPassed.length; j++)
 		{
 			var resource = dataPassed[j];
-				this.html += [
-					'<li>',
-					'<p>' , 
-					resource.address,
-					'</br>',
-					resource.description,
-					'</br>',
-					resource.email_id,
-					'</br>',
-					resource.employer,
-					'</br>',
-					resource.end_date,
-					'</br>',
-					resource.job_id,
-					'</br>',
-					resource.phone_number,
-					'</br>',
-					resource.start_date,
-					'</br>',
-					resource.title,
-					'</br>',
-					resource.wages,
-					'<button class=\'buttonc\' id="',resource.job_id,'" onclick="List.delete(this.id)">Delete</button>',
-					'</li>'].join('');						
-		     
-				$("#list_job").html(this.html);
+			{
+				debugger;
+				html += [
+					'<li data-role="list-divider" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child" role="heading">',
+					'Title : '+resource.title,
+					'<span class="ui-li-count ui-body-inherit">'+ 'Ref No : '+resource.job_id+'</span>',
+					'</li>',
+    			'<li>',
+				'<h2>'+'Employer : '+resource.employer+'</h2>',
+				'<p>','<strong>'+resource.description+'</strong>','</p>',
+				'<p style="color:blue">','<strong>'+'From: '+resource.start_date+'  To: '+resource.end_date+'</strong>','</p>',
+    			'<a>'+resource.email_id+'</a>',
+        	'<p class="ui-li-aside">',
+					'<strong>'+'Wages : '+resource.wages+'</strong>', 
+					'<p id = "DeleteButtonID" class="ui-icon-delete ui-btn-icon-right" </p>',
 					
-			}	
+					'</li>'].join('');
+			}
+				$("#employee_cart_jobs").html(html);
+			}
+		},
+
+		//<span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span>
 		
-	},
+			//<span class="ui-btn-text">Cancel</span>
+		
 	delete: function(id){
 		alert('delete');
 		//alert($(this).id);
 		alert(id);
 	},
+
+
 	
 	init: function() {
 		var self = this;
@@ -118,3 +117,5 @@ var List = {
 	$(window).ready(function() {
 		List.init();
 	});
+
+
