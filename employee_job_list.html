@@ -16,16 +16,17 @@
 	<div data-role="page" data-theme="c">
 		<div data-role="header" data-theme = "c">
 			<h4> Employee Account </h4>
-			<a href="menu.html" rel="external" data-icon="home" class="ui-btn-right">Home</a>
+			<a href="menu.html" rel="external" data-icon="power" class="ui-btn-right">Logout</a>
 		</div>
 		<div role="main" class="ui-content ui-overlay-c">
-		<center>
-		<input type="button" data-icon="plus" data-inline="true" value="Add Job" onclick="List.addJob()">	
+		<center><label> <strong>Welcome! Your Postings...</strong> </label> </br> 
 		</center>
 			
 			<ul data-role="listview" data-inset="true" id="employee_cart_jobs">
 			</ul>
-			
+			<center>
+			<input type="button" data-icon="plus" data-inline="true" value="Add Job" onclick="List.addJob()">	
+			</center>
 		</div>
 		<div data-role="footer" data-theme = "c" data-position="fixed"></div>
 	</div>

@@ -26,8 +26,6 @@ var Search = {
 		{
 			var resource = dataPassed[j];
 			resourcezip=resource.zipcode;
-			alert(resourcezip);
-			alert(this.zipcode);
 			if(resourcezip==this.zipcode)
 			{
 				html += [

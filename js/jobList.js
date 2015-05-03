@@ -73,11 +73,10 @@ var List = {
 		{
 			var resource = dataPassed[j];
 			{
-				debugger;
 				html += [
 					'<li data-role="list-divider" class="ui-li-divider ui-bar-inherit ui-li-has-count ui-first-child" role="heading">',
 					'Title : '+resource.title,
-					'<span class="ui-li-count ui-body-inherit">'+ 'Ref No : '+resource.job_id+'</span>',
+					'<span class="ui-li-count ui-body-inherit">'+ 'Ref Id : '+resource.job_id+'</span>',
 					'</li>',
     			'<li>',
 				'<h2>'+'Employer : '+resource.employer+'</h2>',
@@ -93,10 +92,6 @@ var List = {
 				$("#employee_cart_jobs").html(html);
 			}
 		},
-
-		//<span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span>
-		
-			//<span class="ui-btn-text">Cancel</span>
 		
 	delete: function(id){
 		alert('delete');
