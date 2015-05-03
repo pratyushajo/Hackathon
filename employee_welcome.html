@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/empvalidation.js"> </script>
 </head>
 <body>
 	<div data-role="page" data-theme = "c">
@@ -23,7 +24,7 @@
 			<label for="userID">User ID:</label>
 			<input type="text" name="userID" id="userID" value="">
 			
-		<center><button class="ui-btn ui-btn-inline ui-corner-all">Submit</button></center>
+		<center><button class="ui-btn ui-btn-inline ui-corner-all" onclick="Emp.submit()">Submit</button></center>
 		 </br>
 			<center><a href="new_registration.html" rel="external">New to HOPE ?</a> </center>
 		</div>
